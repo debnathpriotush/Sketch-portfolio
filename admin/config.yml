@@ -4,7 +4,7 @@
 # CHANGE THE NEXT LINE: put your GitHub username, a slash, and your repository name.
 backend:
   name: github
-  repo: YOUR-GITHUB-USERNAME/sketch-portfolio
+  repo: debnathpriotush/Sketch-portfolio
   branch: main
 
 # Uploaded pictures are saved into the "image" folder.
