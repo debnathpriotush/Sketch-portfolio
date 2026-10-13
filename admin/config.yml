@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+
+# This file controls the private admin page at yoursite/admin
+# CHANGE THE NEXT LINE: put your GitHub username, a slash, and your repository name.
+backend:
+  name: github
+  repo: YOUR-GITHUB-USERNAME/sketch-portfolio
+  branch: main
+
+# Uploaded pictures are saved into the "image" folder.
+media_folder: /image
+public_folder: /image
+
+collections:
+  - name: portfolio
+    label: Portfolio
+    files:
+      - name: works
+        label: My work (sketches, scribbles, stickers, process)
+        file: data/works.json
+        format: json
+        fields:
+          - name: works
+            label: Pieces
+            label_singular: Piece
+            widget: list
+            add_to_top: true
+            summary: "{{title}} ({{category}})"
+            thumbnail: image
+            fields:
+              - label: Where does it go?
+                name: category
+                widget: select
+                default: sketches
+                options:
+                  - { label: Sketches, value: sketches }
+                  - { label: Scribbles, value: scribbles }
+                  - { label: Stickers, value: stickers }
+                  - { label: Process, value: process }
+              - { label: Title, name: title, widget: string }
+              - { label: Medium (Pencil, Ink, Digital...), name: medium, widget: string, required: false }
+              - { label: Year, name: year, widget: string, default: "2026", required: false }
+              - { label: Picture, name: image, widget: image, required: false, hint: "Tip: resize to about 1600 pixels wide first so the site loads fast." }
+
+      - name: site
+        label: Name, about & contact
+        file: data/site.json
+        format: json
+        fields:
+          - { label: Site name, name: name, widget: string }
+          - { label: Tagline (shown under the name), name: role, widget: string }
+          - { label: About me, name: about, widget: text }
+          - { label: Email (optional), name: email, widget: string, required: false }
+          - { label: Instagram username or link (optional), name: instagram, widget: string, required: false }
+          - { label: Other website (optional), name: website, widget: string, required: false }

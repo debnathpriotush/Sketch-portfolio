@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>brok.enstrokes — Portfolio</title>
+  <meta name="description" content="Sketches, scribbles, stickers and process by brok.enstrokes, illustrator.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b1220'/%3E%3Ctext x='16' y='22.5' font-size='18' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'%3EB%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app" id="app">
+
+    <aside class="sidebar" id="sidebar" aria-label="Site menu">
+      <div class="brand">
+        <div class="logo" id="logo" aria-hidden="true">B</div>
+        <div class="brand-text">
+          <div class="brand-name" id="brandName">brok.enstrokes</div>
+          <div class="brand-role" id="brandRole">Illustrator</div>
+        </div>
+      </div>
+      <nav class="nav" id="nav" aria-label="Sections"></nav>
+      <div class="sidebar-bottom" id="sidebarBottom"></div>
+    </aside>
+
+    <div class="scrim" id="scrim"></div>
+
+    <main class="main">
+      <header class="mobilebar">
+        <button class="icon-btn" id="menuBtn" aria-label="Open menu"></button>
+        <span class="mobilebar-name" id="mobileName">brok.enstrokes</span>
+      </header>
+      <section id="view" class="view" aria-live="polite"></section>
+    </main>
+  </div>
+
+  <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lb-close" id="lbClose" aria-label="Close">&times;</button>
+    <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous piece">&#8249;</button>
+    <figure class="lb-fig">
+      <img id="lbImg" alt="">
+      <figcaption>
+        <div class="lb-text">
+          <strong id="lbTitle"></strong>
+          <span id="lbMeta"></span>
+        </div>
+        <button class="like" id="lbLike" type="button" aria-pressed="false" aria-label="Like this piece"></button>
+      </figcaption>
+    </figure>
+    <button class="lb-nav lb-next" id="lbNext" aria-label="Next piece">&#8250;</button>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <noscript><p style="padding:24px;font-family:sans-serif">This portfolio needs JavaScript to show the artwork.</p></noscript>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

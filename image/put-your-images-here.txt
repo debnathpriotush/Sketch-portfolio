@@ -1,0 +1,2 @@
+Put your artwork pictures in this folder (jpg, png or webp).
+Use simple lowercase names with no spaces, for example: jungkook.png
