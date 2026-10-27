@@ -1,6 +1,13 @@
 {
   "works": [
     {
+      "category": "sketches",
+      "title": "Chainsaw Man",
+      "medium": "Pencil",
+      "year": "2026",
+      "image": "/image/IMG_20260319_161750-01.jpeg"
+    },
+    {
       "category": "process",
       "title": "Tenza (Hell's Paradise)",
       "medium": "Pencil",
